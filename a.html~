@@ -1,0 +1,56 @@
+<div id="content">
+     <h3>Login to Internet Banking</h3>
+     <form id="login" action="" method="post">
+        <p>
+          <label for="userid">UserID:</label>
+          <input type="text" name="UserID" id="UserID"/>
+        </p>
+        <p>
+          <label for="PIN">PIN:</label>
+          <input type="password" name="PIN" id="PIN" />
+        </p>
+
+        <p>
+          <input type="submit" name="btnSend" value="Login" class="submit_button" />
+
+        </p>
+      </form>
+      <td>&nbsp;</td>
+ <p>
+        Not yet registered?
+ <a href="registration.php">Click here to register</a>
+ </p>
+
+  <div id="wrap">
+        <!-- start PHP code -->
+        <?php
+
+            mysql_connect("localhost", "root", "") or die(mysql_error()); // Connect to database server(localhost) with UserID and PIN.
+            mysql_select_db("registrations") or die(mysql_error()); // Select registration database.
+
+            if(isset($_POST['name']) && !empty($_POST['name']) AND isset($_POST['PIN']) && !empty($_POST['PIN'])){
+                $UserID = mysql_escape_string($_POST['name']);
+                $PIN = mysql_escape_string(md5($_POST['PIN']));
+
+                $search = mysql_query("SELECT UserID, PIN, active FROM users WHERE UserID='".$UserID."' AND PIN='".$PIN."' AND active='1'") or die(mysql_error()); 
+                $match  = mysql_num_rows($search);
+
+                if($match > 0){
+                    $msg = 'Login Complete! Thanks';
+                }else{
+                    $msg = 'Login Failed!<br /> Please make sure that you enter the correct details and that you have activated your account.';
+                }
+            }
+
+
+        ?>
+        <!-- stop PHP Code -->
+        <?php 
+            if(isset($msg)){ // Check if $msg is not empty
+                echo '<div class="statusmsg">'.$msg.'</div>'; // Display our message and add a div around it with the class statusmsg
+            } ?>
+
+    </div>
+        </div>
+
+p

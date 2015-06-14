@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Shopping cart</title>
+<style type="text/css">
+<!--
+body {
+background-image:url("html.jpg");
+background-repeat: no-repeat;
+background-size: 100%;
+}
+h1 {
+    color: #C71585;
+    text-align: center;
+}
+h2 {
+    text-align: left;
+    color: red;
+}
+-->
+</style>
+<div>
+<h1><font size ="8"><i>Welcome To Shopping Cart</i></font></h1><br/>
+<h2>Login</h2>
+<div/>
+<body background="image.png">
+<form action="index.php~" method="post"><div align ="left">
+<font color="red"><font size = "4">username:<input type="username" name="username"/><br/>
+password:<input type="password" name="password"/><br/>
+<input type="submit" value="submit"/><div/>
+<p>OR</p><div><font color="blue">
+<p>New?<a href="register.html">Register</a><p/><br/>
+<marquee behavior="scroll" direction="left">
+<img src="http://www.awomensclub.com/wp-content/uploads/Latest-Churidar-Designs3.jpg"  height="150" width="150">
+<img src="http://static14.jassets.com/p/Sourbh-Sarees-Dark-Blue-Desinger-Saree-9385-862777-1-product2.jpg"  height="150" width="150">
+<img src="http://cdn.shopclues.net/images/detailed/6550/dggmcs0026_1408424563.jpg"  height="150" width="150">
+<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQZ4aQfhzIPCV582tLfjEB4-W6cLWn1-OwNxwKDPKb68b10JTfv"  height="150" width="150">
+<img src="http://cdnd.lystit.com/photos/2013/11/07/g-by-guess-blackblack-womens-luzter-tstrap-flat-thong-sandals-product-1-14750669-451683839_large_flex.jpeg"  height="150" width="150">
+<img src="http://img.alibaba.com/wsphoto/v0/454098407/Pure-cotton-men-s-iron-free-leisure-long-sleeved-shirt-man-silks-and-satins-slim-shirts.jpg"  height="150" width="150">
+<img src="http://wristwatchesguru.com/wp-content/uploads/2015/05/Watches-2016.jpg"  height="150" width="150">
+<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR1w8OLt94NZYKqkQFqtwrhIUwl-kLP40BQF5i1ebyx8xZQuX7_qA"  height="150" width="150">
+</marquee>
+
+</body>
+</head>
+</html>
+
